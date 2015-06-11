@@ -44,6 +44,7 @@ public class Principal extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SISTEMA DE ALMACEN");
@@ -101,6 +102,15 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem4);
 
+        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem5.setText("Entradas");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem5);
+
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -140,6 +150,13 @@ public class Principal extends javax.swing.JFrame {
         KardexForm kf = new KardexForm();
           centrarVentana(kf);      
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:}
+        
+        EntradasForm entrada = new EntradasForm();
+          centrarVentana(entrada);   
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
     public void centrarVentana(JInternalFrame frame){
         int x = (jdpfondo.getWidth() / 2)- (frame.getWidth() / 2); 
         int y = (jdpfondo.getHeight() / 2)- (frame.getHeight() / 2); 
@@ -195,6 +212,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JDesktopPane jdpfondo;
     // End of variables declaration//GEN-END:variables
 }
